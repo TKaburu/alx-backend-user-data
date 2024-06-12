@@ -34,3 +34,14 @@ def unauthorized() -> str:
         401 error by using abort
     """
     return abort(401, description='You are unauthorised to access this page')
+
+
+@app_views.route('/forbidden/', strict_slashes=False)
+def forbidden() -> str:
+    """
+    GET /api/v1/forbidden
+    Raise:
+        403 error by using abort
+    """
+    return abort(403, description='You are not allowed to\
+                 access this resource')
