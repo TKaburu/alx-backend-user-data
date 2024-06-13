@@ -36,7 +36,8 @@ class DB:
         This method saves new user to the database
         """
         new_user = User(email=email, password=hashed_password)
-        self.__session.add(new_user)
-        self.__session.commit()
+        session = self._session
+        session.add(new_user)
+        session.commit()
 
         return new_user
