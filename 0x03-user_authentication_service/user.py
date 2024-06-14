@@ -10,13 +10,12 @@ Base = declarative_base()
 class User(Base):
     """
     This class defines a user model
-
     fields:
-        id, the integer primary key
-        email, a non-nullable string
-        hashed_password, a non-nullable string
-        session_id, a nullable string
-        reset_token, a nullable string
+    id, the integer primary key
+    email, a non-nullable string
+    hashed_password, a non-nullable string
+    session_id, a nullable string
+    reset_token, a nullable string
     """
     __tablename__ = 'users'
 
