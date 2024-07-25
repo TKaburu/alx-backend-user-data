@@ -20,6 +20,15 @@ def _hash_password(password: str) -> bytes:
     return hash_psswrd
 
 
+def _generate_uuid() -> str:
+    """
+    This method generates a new UUID from uuid module
+    Return:
+        string uuid
+    """
+    return str(uuid.uuid4())
+
+
 class Auth:
     """Auth class to interact with the authentication database.
     """
